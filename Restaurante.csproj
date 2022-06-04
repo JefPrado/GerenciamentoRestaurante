@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace pooRestaurante
+{
+
+
+    class program
+    {
+
+        static void Main(string[] args)
+        {
+
+            List<Pessoa> Pessoa = new List<Pessoa>();
+            int numCar = 0, numVeg = 0;
+            Console.WriteLine("Quantos sao Carnivoros e Veganos ? ");
+            for (int i = 0; i < 3; i++)
+            {
+                Herdar pessoa = new Herdar();
+                Console.Write("Estilo de Vida: ");
+                pessoa.EstilodeVida = Console.ReadLine();
+                Console.Write("Peso: ");
+                pessoa.Peso = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Tipo de Alimentacao: ");
+                pessoa.TipoAlimentacao = Console.ReadLine();
+                if (pessoa.TipoAlimentacao == "Carnivoro")
+                {
+                    numCar++;
+
+                }
+                else
+                {
+
+                    numVeg++;
+                }
+                Pessoa.Add(pessoa);
+
+
+            }
+            Console.WriteLine("Total de Pessoas Carnivoras: " + numCar);
+            Console.WriteLine("Total de Pessoas Veganas: " + numVeg);
+            Console.ReadKey();
+        }
+
+
+    }
+
+
+}
